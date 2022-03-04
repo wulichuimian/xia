@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>小说阅读</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload=function(){
+				header();
+				nev();
+				articleNev();
+				articleText(5);
+				footer();
+			}
+			
+		</script>
+		<header id="header"></header>
+		<div class="nev" id="nev"></div>
+		<article id="article"></article>
+		<footer id="footer"></footer>
+		<!-- <script type="text/javascript">
+			var nev = document.getElementsByClassName("nev");
+			var nevA = nev[0].getElementsByTagName("a");
+			for(let i=0 ;i<nevA.length;i++){
+				nevA[i].onclick = function(){
+					
+				}
+			}
+		</script> -->
+		<!-- <header>
+			<div class="logo">小说阅读</div>
+			<div class="fun">
+				<div class="search"></div>
+				<div class="user"></div>
+			</div>
+		</header> -->
+		<!-- <div class = "nev">
+			<ul>
+				<li id="boutique_tab" class="cur">精选</li>
+				<li id="category_tab">分类</li>
+				<li id="recommend_tab">免费</li>
+				<li id="bookcase_tab">书架</li>
+			</ul>
+		</class> -->
+		<!-- <article>
+			<section class="select-nev">
+				<ul>
+					<li id="boutique_tab" class="cur">
+						<img src="img/23bf9f64bfc941939d077f4aa5358abb.png" alt="">
+						<p>男生</p>
+					</li>
+					<li id="category_tab">
+						<img src="img/edd6d5f39d3544f2a799e50c59858f3c.png" alt="">
+						<p>女生</p>
+					</li>
+					<li id="recommend_tab">
+						<img src="img/2a52bc621ad0411eb0b768f1f24997c7.png" alt="">
+						<p>完结</p>
+					</li>
+					<li id="bookcase_tab">
+						<img src="img/b6eaec072e58414c97252a0ca8f8f08c.png" alt="">
+						<p>排行</p>
+					</li>
+				</ul>
+			</section>
+			<div class="ious"></div>
+			<section class="select-text">
+				<ul>
+					<li>
+						<img src="img/2.jpg" alt="" >
+						<div class="text">
+							<h2>唐砖</h2>
+							<p>jdsalfkjdlksablgkjkhjk</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</article> -->
+		<!-- <div class="ious"></div> -->
+		<!-- <footer>
+			<ul>
+				<li><a href="">精选</a></li>
+				<li><a href="">分类</a></li>
+				<li><a href="">免费</a></li>
+				<li><a href="">男频</a></li>
+				<li><a href="">女频</a></li>
+			</ul>
+			<div class="infos">
+				<div class="copyright" >Copyright&nbsp;©&nbsp;2022&nbsp;xxxxxx.com</div>
+				<div class="contri">
+					<a href="">小说首页</a>
+					<div>|</div>
+					<a href="">服务声明</a>
+				</div>
+				<div class="contact">客服电话&nbsp;:&nbsp;
+					<a href="">1234-12345678</a>
+					<span>&nbsp;&nbsp;ICP证：
+						<a target="_blank" href="">粤XX-12345678</a>&nbsp;
+					</span>
+				</div>
+			</div>
+		</footer> -->
+	</body>
+</html>

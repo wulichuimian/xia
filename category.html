@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小说阅读</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/category.css"/>
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function() {
+				var boySrc = ["img/6e53084bb0654b45925b1c51e2ca370c.png",
+				"img/6e145f7f9ebb4ccc9237e1a21bcfd2ac.png",
+				"img/9e2804c0ef4b479ba723b10d1dff0267.png",
+				"img/0f6cc4e4a29c4d969a6b74efd451b9c2.png",
+				"img/4683c868554a439ea0335a7a7571f3e8.png",
+				"img/68cd686020a54b9cb6e3b31355be94f8.png"];
+				var boyTitle = ["玄幻奇幻","现代都市","武侠仙侠","科幻小说","游戏竞技","宅小说"];
+				var boyDesc = ["东方玄幻 | 西方魔幻 | 异界争霸 | 洪荒神话",
+				"现代修真 | 都市纵横 | 都市异能 | 娱乐明星 | 校园生活 | 职场商战 | 小康致富",
+				"传统武侠 | 古典仙侠",
+				"未来世界 | 科技争霸 | 古武机甲 | 末世进化 | 时空穿梭",
+				"虚拟网游 | 电子竞技 | 体育竞技",
+				"原生幻想 | 轻松搞笑"];
+				var girlSrc = ["img/ac20099d3a104eaeac5e008d2e242be6.png",
+				"img/8fab1ef778624fc0aa0975dc9a902d6e.png",
+				"img/6ca71106288d4a39aae896be143498c5.png",
+				"img/6c59463ec6d24a529fccde3abd7702b3.png",
+				"img/e6ba7da5ed3e4ed79f590ef05d24403d.png"];
+				var girlTitle = ["现代言情","古代言情","幻想言情","浪漫青春","轻小说"];
+				var girlDesc = ["都市情缘 | 总裁豪门 | 婚恋家庭 | 民国旧影 | 娱乐巨星 | 强势宠婚",
+				"古代情缘 | 穿越架空 | 女尊权谋 | 宫闱宅斗 | 经商种田",
+				"仙侠奇缘 | 魔幻情缘 | 穿越时光 | 末世危情 | 网配快穿",
+				"青春校园 | 唯美绝恋",
+				"青春日常"];
+				var publishedSrc = ["img/f07552a143924c14ac0ef564251055c5.png",
+				"img/d9edc798884d402c8e6f53629f266697.png",
+				"img/efa2fc00cbaf46c9bb278c8bdab1bb66.png",
+				"img/04ea9dd307c1459da07dd7083f61807d.png"];
+				var publishedTitle = ["短篇","经典名著","其他出版","现代文学"];
+				var publishedDesc = ["儿童文学 |  影视剧本 | 短篇小说 | 美文游记 | 生活随笔",
+				"经管励志 | 社科科普 | 古典名著",
+				"文史传记 | 悬疑出版 | 宗教哲学",
+				"文学小说 | 原创出版 | 官场职场 | 情感小说"];
+				header();
+				nev();
+				footer();
+				section("男生分类",boySrc,boyTitle,boyDesc);
+				section("女生分类",girlSrc,girlTitle,girlDesc);
+				section("出版分类",publishedSrc,publishedTitle,publishedDesc);
+				var search = document.getElementsByClassName("search");
+				console.log(search);
+			}
+		</script>
+		<header id="header"></header>
+		<div class="nev" id="nev"></div>
+		<article id="article">
+			
+		</article>
+		<footer id="footer"></footer>
+	</body>
+</html>

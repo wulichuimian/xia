@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小说阅读</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				/* justify-content: space-between; */
+				height: 100vh;
+				/* background-color: #FFFF00; */
+			}
+
+			input {
+				outline: none;
+			}
+
+			.inSearch {
+				flex: 1;
+				margin: 0 30px;
+				padding-left: 8px;
+				border-radius: 10px;
+				border: 0;
+				background-color: #F8F8F9;
+			}
+
+			header {
+				display: flex;
+				border-bottom: 1px solid #F8F8F9;
+			}
+
+			header div:first-child {
+				width: 30px;
+			}
+
+			header div:last-child {
+				/* padding-left: 20px; */
+				width: 80px;
+			}
+
+			artcle {
+				flex: 1;
+				background-color: #FFFFFF;
+				/* height: 100%; */
+			}
+
+			footer {
+				border-radius: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			$(function() {
+				$("header").children().eq(0).click(function() {
+					window.history.go(-1);
+				})
+			})
+		</script>
+		<header>
+			<div style="font-size: 40px;line-height: 23px;">&lt;</div>
+			<input type="text" class="inSearch">
+			<div style="font-size: 30px;line-height: 25px;">搜索</div>
+		</header>
+		<artcle></artcle>
+		<footer id="footer"></footer>
+		<script type="text/javascript">
+			window.onload = function() {
+				footer();
+			}
+		</script>
+	</body>
+</html>
