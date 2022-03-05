@@ -117,7 +117,7 @@ function articleText(num) {
 		url: "getBooks.php",
 		success: function(resul) {
 			var arr = JSON.parse(resul);
-			console.log(arr);
+			// console.log(arr);
 				for (let i = 0; i < arr.length; i++) {
 					let sec = document.createElement("section");
 					sec.setAttribute("class", "select-text")
@@ -126,6 +126,7 @@ function articleText(num) {
 					let img = document.createElement("img");
 					let div = document.createElement("div");
 					img.setAttribute("src", arr[i].imgUrl);
+					img.setAttribute("loading", "lazy");
 					div.setAttribute("class", "text")
 					let h2 = document.createElement("h2");
 					let p = document.createElement("p");
