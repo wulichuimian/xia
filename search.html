@@ -11,9 +11,7 @@
 			body {
 				display: flex;
 				flex-direction: column;
-				/* justify-content: space-between; */
 				height: 100vh;
-				/* background-color: #FFFF00; */
 			}
 
 			input {
@@ -23,19 +21,23 @@
 			.inSearch {
 				flex: 1;
 				margin: 0 30px;
-				padding-left: 8px;
-				border-radius: 10px;
+				padding-left: 10px;
+				height: 28px;
 				border: 0;
+				border-radius: 20px;
 				background-color: #F8F8F9;
 			}
 
 			header {
 				display: flex;
+				align-items: center;
 				border-bottom: 1px solid #F8F8F9;
 			}
 
-			header div:first-child {
+			header i {
+				padding-left: 10px;
 				width: 30px;
+				font-size: 40px;
 			}
 
 			header div:last-child {
@@ -43,7 +45,7 @@
 				width: 80px;
 			}
 
-			artcle {
+			article {
 				flex: 1;
 				background-color: #FFFFFF;
 				/* height: 100%; */
@@ -63,11 +65,11 @@
 			})
 		</script>
 		<header>
-			<div style="font-size: 40px;line-height: 23px;">&lt;</div>
-			<input type="text" class="inSearch">
+			<i>&#xe61f;</i>
+			<input type="text" class="inSearch" placeholder="搜索书名、作者、分类">
 			<div style="font-size: 30px;line-height: 25px;">搜索</div>
 		</header>
-		<artcle></artcle>
+		<article></article>
 		<footer id="footer"></footer>
 		<script type="text/javascript">
 			window.onload = function() {

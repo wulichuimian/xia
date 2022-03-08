@@ -23,13 +23,7 @@ header>div:nth-child(2) {
 	font-weight: 700;
 }
 
-@font-face {
-	font-family: 'iconfont';
-	/* Project id 2433841 */
-	src: url('//at.alicdn.com/t/font_2433841_ssjuug8jb8.woff2?t=1645256559765') format('woff2'),
-		url('//at.alicdn.com/t/font_2433841_ssjuug8jb8.woff?t=1645256559765') format('woff'),
-		url('//at.alicdn.com/t/font_2433841_ssjuug8jb8.ttf?t=1645256559765') format('truetype');
-}
+
 
 input {
 	padding: 15px 0;

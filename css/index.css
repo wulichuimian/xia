@@ -177,3 +177,6 @@ footer ul {
 .contact{
 	padding-bottom: 10px;
 }
+.idNone{
+	display: none;
+}

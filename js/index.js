@@ -7,7 +7,13 @@ function header(){
 			window.location.href = "search.html";
 		})
 		$(".user").click(function(){
-			window.location.href = "login.html";
+			cookies = document.cookie;
+			if(cookies == ''){
+				window.location.href = "login.html";
+			}else{
+				window.location.href = "user.html";
+			}
+			
 		})
 	})
 }
@@ -107,7 +113,7 @@ function articleNev() {
 }
 
 //创建article里select-text的内容
-function articleText(num) {
+function articleText() {
 	var art = document.getElementById("article");
 	let ious1 = document.createElement("div");
 	ious1.setAttribute("class", "ious");
@@ -119,7 +125,21 @@ function articleText(num) {
 			var arr = JSON.parse(resul);
 			// console.log(arr);
 				for (let i = 0; i < arr.length; i++) {
-					let sec = document.createElement("section");
+					art.innerHTML += `<section class="select-text">
+						<ul>
+							<li>
+								<img src=${arr[i].imgUrl} loading='lazy'>
+								<div class='text'>
+									<h2>
+										<a href="booksIntroduce.html?id=${arr[i].id}">${arr[i].title}</a>
+									</h2>
+									<p>${arr[i].Introduction}</p>
+								</div>
+								<div class="idNone">${arr[i].id}</div>
+							</li>
+						</ul>
+					</section>`;
+					/*let sec = document.createElement("section");
 					sec.setAttribute("class", "select-text")
 					let ul = document.createElement("ul");
 					let li = document.createElement("li");
@@ -131,7 +151,7 @@ function articleText(num) {
 					let h2 = document.createElement("h2");
 					let p = document.createElement("p");
 					let a = document.createElement("a");
-					a.setAttribute("href",arr[i].textUrl+"?id="+arr[i].id);
+					a.setAttribute("href","booksIntroduce.html"+"?id="+arr[i].id);
 					let at = document.createTextNode(arr[i].title);
 					let pt = document.createTextNode(arr[i].Introduction);
 					a.appendChild(at);
@@ -143,7 +163,7 @@ function articleText(num) {
 					li.appendChild(div);
 					ul.appendChild(li);
 					sec.appendChild(ul);
-					art.appendChild(sec);
+					art.appendChild(sec);*/
 					}
 					},
 		error: function(mag) {
@@ -272,5 +292,15 @@ function section(Categories, secSrc, secTitle,secDesc) {
 	tit1.setAttribute("class", "tit");
 	art.appendChild(tit1);
 	// art.appendChild(ious1);
+}
+
+//头部按钮的点击事件
+function button1() {
+	$(".return").click(function() {
+		window.history.go(-1);
+	})
+	$(".home").click(function() {
+		window.location.href = "index.html";
+	})
 }
 

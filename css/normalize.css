@@ -469,3 +469,13 @@ template {
 [hidden] {
   display: none;
 }
+i{
+	font-family: 'iconfont';
+	font-style: normal;
+}
+@font-face {
+  font-family: 'iconfont';  /* Project id 2433841 */
+  src: url('//at.alicdn.com/t/font_2433841_4p7zfn1pgrm.woff2?t=1646723548412') format('woff2'),
+       url('//at.alicdn.com/t/font_2433841_4p7zfn1pgrm.woff?t=1646723548412') format('woff'),
+       url('//at.alicdn.com/t/font_2433841_4p7zfn1pgrm.ttf?t=1646723548412') format('truetype');
+}

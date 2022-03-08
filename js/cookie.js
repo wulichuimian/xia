@@ -8,7 +8,7 @@ function setCookie(name,value,{expires,path}){
 	}
 	document.cookie = cookieStr;
 }
-function gitCookie(name){
+function getCookie(name){
 	var cookieStr = document.cookie;
 	var start = cookieStr.indexOf(name);
 	if(start == -1){

@@ -1,11 +1,4 @@
-function button1() {
-	$(".return").click(function() {
-		window.history.go(-1);
-	})
-	$(".home").click(function() {
-		window.location.href = "index.html";
-	})
-}
+
 
 function login() {
 	$(".login").click(function() {
@@ -26,7 +19,7 @@ function login() {
 						prompt.removeClass("failure")
 					}
 					prompt.addClass("successful");
-					setCookie(username,passwd,{});
+					setCookie("username",username,{});
 					window.location.href = "index.html";
 				}else{
 					if(prompt.removeClass("successful")){
@@ -50,7 +43,8 @@ function registered(){
 	$(".registered").click(function() {
 		var username = $(".username").val();
 		var passwd = $(".passwd").val();
-		var prompt = $(".prompt")
+		var prompt = $(".prompt");
+		//创建用户
 		$ajax({
 			method: "post",
 			url: "registered.php",
@@ -60,7 +54,40 @@ function registered(){
 			},
 			success: function(resul) {
 				var obj = JSON.parse(resul);
+				console.log(obj);
 				if(obj.code == 0){
+					//创建用户专属表
+					$ajax({
+						method: "post",
+						url: "theRegistry.php",
+						data: {
+							username: username,
+						},
+						success: function(resul) {
+							var obj = JSON.parse(resul);
+							console.log(obj);
+							//如果创建数据表失败就把该用户删除；
+							if(obj.code != 0){
+								$ajax({
+									method: "post",
+									url: "deleteUser.php",
+									data: {
+										username: username,
+									},
+									success: function(resul) {
+										var obj = JSON.parse(resul);
+										console.log(obj);
+									},
+									error: function(mag) {
+										console.log(mag);
+									}
+								});
+							}
+						},
+						error: function(mag) {
+							console.log(mag);
+						}
+					});
 					if(prompt.removeClass("failure")){
 						prompt.removeClass("failure")
 					}
