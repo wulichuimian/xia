@@ -11,7 +11,7 @@
  Target Server Version : 100410
  File Encoding         : 65001
 
- Date: 08/03/2022 17:47:30
+ Date: 08/03/2022 18:56:48
 */
 
 SET NAMES utf8mb4;
@@ -41,7 +41,6 @@ CREATE TABLE `aqwe`  (
 -- Records of aqwe
 -- ----------------------------
 INSERT INTO `aqwe` VALUES (2);
-INSERT INTO `aqwe` VALUES (1);
 INSERT INTO `aqwe` VALUES (4);
 INSERT INTO `aqwe` VALUES (3);
 
@@ -56,7 +55,7 @@ CREATE TABLE `books`  (
   `Introduction` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `textUrl` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `author` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `type` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `classification` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 

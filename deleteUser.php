@@ -18,16 +18,13 @@
 	$sql = "delete from user where user like '{$username}'";
 	
 	$res = mysqli_query($link,$sql);
-	$row = mysqli_fetch_assoc($res);
-	$sql2 = "create table a".$row["id"]."(id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY)";
-	$res2 = mysqli_query($link,$sql2);
-	if(!$res2){
+	if(!$res){
 		$responseData['code'] = 2;
-		$responseData['message'] = $row["id"];
+		$responseData['message'] = "用户删除失败";
 		echo json_encode($responseData);
 		exit;
 	}else{
-		$responseData['message'] = "数据表创建成功";
+		$responseData['message'] = "用户删除成功";
 		echo json_encode($responseData);
 	}
 	//关闭数据库
