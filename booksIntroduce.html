@@ -43,29 +43,33 @@
 				let username = getCookie("username");
 				// console.log(art);
 				button1();
-				//判断这本书是否已经加入到该用户中了
-				$ajax({
-					method: "post",
-					url: "judge.php",
-					data: {
-						username: username,
-						id:booksId
-					},
-					success: function(resul) {
-						var obj = JSON.parse(resul);
-						if(obj.code == 0){
-							btn.children[0].innerHTML = "<i>&#xe66c;</i>"+obj.message;
-							btn.children[0].disabled = false;
-						}else{
-							btn.children[0].innerHTML = "<i>&#xe67e;</i>"+obj.message;
-							btn.children[0].disabled = true;
+				//判断是否有用户登录
+				if(username){
+					//判断这本书是否已经加入到该用户中了
+					$ajax({
+						method: "post",
+						url: "judge.php",
+						data: {
+							username: username,
+							id:booksId
+						},
+						success: function(resul) {
+							var obj = JSON.parse(resul);
+							if(obj.code == 0){
+								btn.children[0].innerHTML = "<i>&#xe66c;</i>"+obj.message;
+								btn.children[0].disabled = false;
+							}else{
+								btn.children[0].innerHTML = "<i>&#xe67e;</i>"+obj.message;
+								btn.children[0].disabled = true;
+							}
+							console.log(obj);
+						},
+						error: function(mag) {
+							console.log(mag);
 						}
-						console.log(obj);
-					},
-					error: function(mag) {
-						console.log(mag);
-					}
-				});
+					});
+				}
+				
 				$ajax({
 					method: "post",
 					url: "booksIntroduce.php",
@@ -107,7 +111,7 @@
 						}
 						//点击跳转到这本书的内容页面
 						btn.children[1].onclick = function(){
-							window.location.href = arr.textUrl;
+							window.location.href = "reading.html?title="+arr.title;
 						}
 						// console.log(arr);
 						// 创建本页面的结构
@@ -117,11 +121,11 @@
 									<img src=${arr.imgUrl} loading='lazy'>
 									<div class='text'>
 										<h2>
-											<a href="booksIntroduce.html?id=${arr.id}">${arr.title}</a>
+											<a href="booksIntroduce.html?name=${arr.id}">${arr.title}</a>
 										</h2>
 										<p> 作者:&nbsp;&nbsp;&nbsp;${arr.author}</p>
 										<br/>
-										<p> 类型:&nbsp;&nbsp;&nbsp;${arr.type}</p>
+										<p> 类型:&nbsp;&nbsp;&nbsp;${arr.classification}</p>
 										<br/>
 										<p> 已完结</p>
 									</div>
@@ -143,7 +147,7 @@
 		</header>
 		<article></article>
 		<div class="button">
-			<button></button>
+			<button><i>&#xe66c;</i>加入书架</button>
 			<button><i>&#xe6b8;</i>免费阅读</button>
 		</div>
 	</body>

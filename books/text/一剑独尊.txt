@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="../../css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
-		<title></title>
-		<style type="text/css">
-			p{
-				padding: 30px 20px 0 29px;
-				background-color: #ffffff;
-			}
-		</style>
-	</head>
-	<body>
-		<p>青城，叶家，祖祠。
+青城，叶家，祖祠。
 
     “先祖在上，叶玄无才，无德......此刻起，罢黜叶玄世子之位，由叶廊继承。”
 
@@ -296,6 +280,4 @@
 
     右边：禁道，禁命，禁万界人仙。
 
-    ......</p>
-	</body>
-</html>
+    ......

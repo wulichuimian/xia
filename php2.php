@@ -20,7 +20,7 @@
 					error:function(mag){
 						console.log(mag);
 					}
-				})
+				});
 			}}
 		</script>
 		<button type="button">huoqu</button>
